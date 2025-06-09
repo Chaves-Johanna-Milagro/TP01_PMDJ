@@ -14,24 +14,24 @@ public class ShowAxis : MonoBehaviour // Script dentro de un emply
     void Start()
     {
         //definicion de la posicion en el eje X
-        _posStartX = new Vector3(5f,0f,0f);
-        _posEndX = new Vector3(-5f,0f,0f);
+        _posStartX = new Vector3(40f,0f,0f);
+        _posEndX = new Vector3(-40f,0f,0f);
 
         //definicion de la posicion en el eje Y
-        _posStartY = new Vector3 (0f,5f,0f);
-        _posEndY = new Vector3 (0f,-5f,0f);
+        _posStartY = new Vector3 (0f,30f,0f);
+        _posEndY = new Vector3 (0f,-30f,0f);
 
         //obtencion del componenete LineRenderer de los hijos
         _lineX = transform.Find("AxisX").GetComponent<LineRenderer>();
         _lineY = transform.Find("AxisY").GetComponent<LineRenderer>();
 
         //definicion del grosor de la linea X
-        _lineX.startWidth = 0.05f;
-        _lineX.endWidth = 0.05f;
+        _lineX.startWidth = 0.5f;
+        _lineX.endWidth = 0.5f;
 
         //definicion del grosor de la linea Y
-        _lineY.startWidth = 0.05f;
-        _lineY.endWidth = 0.05f;
+        _lineY.startWidth = 0.5f;
+        _lineY.endWidth = 0.5f;
 
         //metodo que dibuja las lineas
         DrawAxis(); 
